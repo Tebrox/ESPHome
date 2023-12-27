@@ -4,7 +4,6 @@ esphome:
   board: nodemcuv2
   platform: esp8266
 
-
 api:
   encryption:
     key: ${api_key}
@@ -17,7 +16,7 @@ captive_portal:
 
 sensor: 
   - platform: uptime
-    name: Laufzeit
+    name: Uptime
 
   - platform: adc
     pin: VCC
