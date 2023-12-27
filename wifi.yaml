@@ -1,0 +1,11 @@
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: ${ap_ssid}
+    password: ${ap_password}
+
+sensor: 
+  - platform: wifi_signal
+    name: "Wifi Signal Sensor"
+    update_interval: 60s

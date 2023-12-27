@@ -1,0 +1,42 @@
+esphome:
+  name: ${devicename}
+  friendly_name: ${upper_devicename}
+  board: nodemcuv2
+  platform: esp8266
+
+
+api:
+  encryption:
+    key: ${api_key}
+
+logger:
+
+ota:
+
+captive_portal:
+
+sensor: 
+  - platform: uptime
+    name: Laufzeit
+
+  - platform: adc
+    pin: VCC
+    name: VCC Voltage
+
+
+binary_sensor:
+  - platform: status
+    name: "Home Assistant Status"
+
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: ESP IP Address
+    ssid:
+      name: ESP Connected SSID
+    bssid:
+      name: ESP Connected BSSID
+    mac_address:
+      name: ESP Mac Wifi Address
+    dns_address:
+      name: ESP DNS Address
