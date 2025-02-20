@@ -1,16 +1,23 @@
 esphome:
   name: ${devicename}
   friendly_name: ${upper_devicename}
+
+esp8266:
   board: nodemcuv2
-  platform: esp8266
+  framework:
+    version: recommended
 
 api:
   encryption:
     key: ${api_key}
 
+web_server:
+  port: 80
+
 logger:
 
 ota:
+  platform: esphome
 
 captive_portal:
 
