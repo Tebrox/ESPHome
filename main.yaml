@@ -16,14 +16,6 @@ ota:
 
 captive_portal:
 
-sensor: 
-  - platform: uptime
-    name: Uptime
-
-  - platform: adc
-    pin: VCC
-    name: VCC Voltage
-
 binary_sensor:
   - platform: status
     name: "Home Assistant Status"
